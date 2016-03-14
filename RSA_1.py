@@ -79,8 +79,8 @@ def myrsa (p, q):
 			if e * d % phi_N == 1:
 				d  
 
-          print " La llave publica es: ",e,", ",N"
-          print " La llave privada es: ",d,", ",N"
+          print "llave publica: (",e,",",N,")"
+	  print "llave privada: (",d,",",N,")"
 
 print myrsa (2, 7) 
 
