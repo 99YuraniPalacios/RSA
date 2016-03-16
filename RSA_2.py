@@ -20,28 +20,37 @@
 # Despues de tener e,N la llave publica y d, N la llave privada, se empieza a desencriptar el mensaje
 
 
+def isprime (j):
+     
+    for i in range(2, j):
+          if j % i == 0:
+                  return 0
+
+    return 1
+
+
 def hackrsa(e,N,n1,n2,n3,n4):
 	for i in range(2,N):
 		for j in range(2,N):
-			if esprimo(i)==1 and esprimo(j)==1 and i*j == N:
+			if isprime(i)==1 and isprime(j)==1 and i*j == N:
 				phi=(i-1) * (j-1)
-	for d in range(phi*2):
+	for d in range(phi*4):
 		if e*d%phi== 1:
 			d
 	m1 = n1**d%N
 	m2 = n2**d%N
 	m3 = n3**d%N
 	m4 = n4**d%N
-	print "id_pub: (",e,",",N,")"
-	print "id_priv: (",d,",",N,")"
+	print "Llave publica: (",e,",",N,")"
+	print "Llave privada: (",d,",",N,")"
 	return m1, m2, m3, m4
 
 	
 # Para imprimir el mensaje decodificado imprimimos un mensaje para decir que este es el mensaje
 
 
-m1, m2,m3,m4 = hackrsa(5,14,4,4,4,4)
+m1, m2,m3,m4 = hackrsa(7,14,6,6,6,6)
 print "Mensaje decodificado"
-print "- ",m1,m2,m3,m4
+print     m1,m2,m3,m4
 
 
