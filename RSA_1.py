@@ -1,9 +1,9 @@
-# TRABAJO ALGORITMO RSA 
+#       TRABAJO ALGORITMO RSA 
 # Presentado por: Yurani Melisa Palacios Palacios 
 # Estudiante Compuacion Cientifica "Primer Semestre" 
 # Presentado a: Docente Carlos Andres Vera Ciro 
-# Universidad de Medellin 
-# 2016 
+#      Universidad de Medellin 
+#              2016 
 
 
 # PROBLEMA 1 
@@ -82,7 +82,7 @@ def myrsa (p, q):
           print "llave publica: (",e,",",N,")"
 	  print "llave privada: (",d,",",N,")"
 
-print myrsa (2, 7) 
+print myrsa (7, 11) 
 
 
 
